@@ -21,7 +21,9 @@ function App() {
   // Merchants can toggle the `block_progress` capability behavior within the checkout editor
   const canBlockProgress = useExtensionCapability("block_progress");
   // [END client-validation.subscribe-block-progress]
+  // [START // [START client-validation.field-required]]
   const label = canBlockProgress ? "Your age" : "Your age (optional)";
+  // [END client-validation.field-required]
   // [START client-validation.buyer-journey-intercept]
   // Use the `buyerJourney` intercept to conditionally block checkout progress
   useBuyerJourneyIntercept(({ canBlockProgress }) => {
